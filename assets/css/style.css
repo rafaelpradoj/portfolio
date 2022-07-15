@@ -1,0 +1,87 @@
+/* Poppins Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap");
+
+:root {
+  --body-bg-color: #faf7fd;
+  --link-color: rgb(80, 10, 141);
+  --purple: #bb99dd;
+
+  --font-poppins: "Poppins", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* General selector for links */
+.link {
+  color: var(--purple);
+  text-decoration: none;
+  transition: all 0.3s;
+}
+.link:hover {
+  color: var(--link-color);
+}
+
+body {
+  background-color: var(--body-bg-color);
+  color: var(--purple);
+  font-family: var(--font-poppins);
+}
+
+.container {
+  align-items: center;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 2em;
+  width: 25em;
+}
+
+.photo {
+  border: solid var(--purple) 2px;
+  border-radius: 50%;
+  margin-bottom: 1em;
+  padding: 5px;
+  width: 12em;
+}
+
+.paragraph-instagram {
+  margin-bottom: 3em;
+}
+
+.project-list {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+
+.project-item {
+  border: solid var(--purple) 2px;
+  border-radius: 6px;
+  margin-bottom: 1em;
+  padding: 10px;
+  width: 15em;
+}
+
+.project-paragraph {
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.social-media {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  margin-top: 2em;
+}
+
+
+.social-media-list {
+  padding: 15px;
+}
