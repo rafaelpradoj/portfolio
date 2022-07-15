@@ -13,7 +13,7 @@
 <br>
 
 <h2>:link: Layout do projeto</h2>
-<img src="assets/img/capaProjetoQuiz.PNG" />
+<img src="assets/img/capaProjetoPortfolio.png" />
 
 <br>
 
