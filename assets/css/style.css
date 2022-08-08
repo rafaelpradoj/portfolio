@@ -20,14 +20,68 @@
   text-decoration: none;
   transition: all 0.3s;
 }
-.link:hover {
+
+/* Toggle button */
+.toggle-button {
+  appearance: none;
+  background-color: black;
+  border-radius: 50px;
+  box-shadow: inset 0px 0px 16px 1px rgba(0, 0, 0, 0.24);
+  cursor: pointer;
+  height: 40px;
+  margin-bottom: 2em;
+  position: relative;
+  transition: 0.4s;
+  width: 80px;
+}
+
+.toggle-button::before {
+  content: '';
+  background-color: #edf3f1;
+  border: solid 2px var(--purple);
+  border-radius: 50px;
+  box-shadow: 0px 4px 8px 1px rgba(0, 0, 0, 0.25);
+  height: 40px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transform: scale(1.1);
+  transition: 0.4s;
+  width: 40px;
+}
+
+.toggle-button:checked {
+  background-color: var(--body-bg-color);
+  box-sizing: border-box;
+}
+
+.toggle-button:checked::before {
+  box-sizing: border-box;
+  left: 40px;
+}
+
+/* Toggle button effects */
+.body-before-toggle {
+  background-color: var(--body-bg-color);
+}
+
+.body-after-toggle {
+  background-color: black;
+}
+
+.link-before-toggle:hover {
   color: var(--link-color);
 }
 
+.link-after-toggle:hover {
+  color: white;
+}
+
+/* Initial style */
 body {
-  background-color: var(--body-bg-color);
   color: var(--purple);
   font-family: var(--font-poppins);
+  transition: 0.5s;
 }
 
 .container {
@@ -80,7 +134,6 @@ body {
   list-style: none;
   margin-top: 2em;
 }
-
 
 .social-media-list {
   padding: 15px;
