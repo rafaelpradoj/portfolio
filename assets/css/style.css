@@ -3,6 +3,7 @@
 
 :root {
   --body-bg-color: #faf7fd;
+  --dark-color: #4e4e4e;
   --link-color: rgb(80, 10, 141);
   --purple: #bb99dd;
 
@@ -12,6 +13,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 /* General selector for links */
@@ -21,15 +23,62 @@
   transition: all 0.3s;
 }
 
-/* Toggle button */
+
+/* Toggle button effects */
+.body-before-toggle {
+  background-color: var(--body-bg-color);
+}
+
+.body-after-toggle {
+  background-color: var(--dark-color);
+}
+
+.link-before-toggle:hover {
+  color: var(--link-color);
+}
+
+.link-after-toggle:hover {
+  color: white;
+}
+
+/* Initial style */
+body {
+  color: var(--purple);
+  font-family: var(--font-poppins);
+  height: 100vh;
+  transition: 0.5s;
+  user-select: none;
+  width: 100vw;
+}
+
+.container {
+  align-items: center;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: 42em;
+  margin: 0 auto;
+  padding: 7px;
+  padding-top: 1em;
+  width: 25em;
+}
+
+.toggle-container {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 2em;
+  justify-content: space-between;
+  width: 9em;
+}
+
 .toggle-button {
   appearance: none;
-  background-color: black;
+  background-color: var(--dark-color);
   border-radius: 50px;
   box-shadow: inset 0px 0px 16px 1px rgba(0, 0, 0, 0.24);
   cursor: pointer;
   height: 40px;
-  margin-bottom: 2em;
   position: relative;
   transition: 0.4s;
   width: 80px;
@@ -60,40 +109,6 @@
   left: 40px;
 }
 
-/* Toggle button effects */
-.body-before-toggle {
-  background-color: var(--body-bg-color);
-}
-
-.body-after-toggle {
-  background-color: black;
-}
-
-.link-before-toggle:hover {
-  color: var(--link-color);
-}
-
-.link-after-toggle:hover {
-  color: white;
-}
-
-/* Initial style */
-body {
-  color: var(--purple);
-  font-family: var(--font-poppins);
-  transition: 0.5s;
-}
-
-.container {
-  align-items: center;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-  padding: 2em;
-  width: 25em;
-}
-
 .photo {
   border: solid var(--purple) 2px;
   border-radius: 50%;
@@ -103,7 +118,8 @@ body {
 }
 
 .paragraph-instagram {
-  margin-bottom: 3em;
+  cursor: default;
+  margin-bottom: 28px;
 }
 
 .project-list {
@@ -132,7 +148,6 @@ body {
   display: flex;
   flex-direction: row;
   list-style: none;
-  margin-top: 2em;
 }
 
 .social-media-list {
