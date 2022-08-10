@@ -7,7 +7,7 @@
 </p>
 
 <p>
-  O objetivo do projeto foi criar um ambiente com minhas redes sociais e principais projetos já criados.
+  O objetivo do projeto foi criar um ambiente com minhas redes sociais e principais projetos já criados, utilizando HTML, CSS e JavaScript.
 </p>
 
 <br>
@@ -21,6 +21,7 @@
 <ul>
  <li>HTML</li>
  <li>CSS</li>
+ <li>JavaScript</li>
 </ul>
 
 <br>
