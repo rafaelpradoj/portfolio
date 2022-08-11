@@ -2,56 +2,23 @@ const body = document.body
 const toggleButton = document.querySelector('.toggle-button')
 const links = document.querySelectorAll('.link')
 
-const changeElementClass = elementProperties => {
-  const { element, oldClass, newClass } = elementProperties
-
-  element.classList.remove(oldClass)
-  element.classList.add(newClass)
+const activateDarkMode = () => {
+  body.classList.add('body-after-toggle')
+  links.forEach(link => link.classList.add('link-after-toggle'))
 }
-const darkModeLinks = () => {
-  links.forEach(link => {
-    const linksDarkClass = {
-      element: link,
-      oldClass: 'link-before-toggle',
-      newClass: 'link-after-toggle'
-    }
-    
-    changeElementClass(linksDarkClass)
-  })
+const removeDarkMode = () => {
+  body.classList.remove('body-after-toggle')
+  links.forEach(link => link.classList.remove('link-after-toggle'))
 }
-const lightModeLinks = () => {
-  links.forEach(link => {
-    const linksLightClass = {
-      element: link,
-      oldClass: 'link-after-toggle',
-      newClass: 'link-before-toggle'
-    }
-
-    changeElementClass(linksLightClass)
-  })
-}
-
-const bodyDarkClass = {
-  element: body,
-  oldClass: 'body-before-toggle',
-  newClass: 'body-after-toggle'
-}
-const bodyLightClass = {
-  element: body,
-  oldClass: 'body-after-toggle',
-  newClass: 'body-before-toggle'
-}
-
-const changeBodyBackgroundColor = () => {
+const darkModeSettings = () => {
   const isToggleButtonChecked = toggleButton.checked === true
+
   if (isToggleButtonChecked) {
-    changeElementClass(bodyDarkClass)    
-    darkModeLinks()
+    activateDarkMode()
     return
   }
 
-  changeElementClass(bodyLightClass)
-  lightModeLinks()
+  removeDarkMode()
 }
 
-toggleButton.addEventListener('click', changeBodyBackgroundColor)
+toggleButton.addEventListener('click', darkModeSettings)

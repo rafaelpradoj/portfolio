@@ -23,20 +23,14 @@
   transition: all 0.3s;
 }
 
-
-/* Toggle button effects */
-.body-before-toggle {
-  background-color: var(--body-bg-color);
-}
-
-.body-after-toggle {
-  background-color: var(--dark-color);
-}
-
-.link-before-toggle:hover {
+.link:hover {
   color: var(--link-color);
 }
 
+/* Toggle button effects */
+.body-after-toggle {
+  background-color: var(--dark-color);
+}
 .link-after-toggle:hover {
   color: white;
 }
@@ -74,7 +68,7 @@ body {
 
 .toggle-button {
   appearance: none;
-  background-color: var(--dark-color);
+  background-color: #edf3f1;
   border-radius: 50px;
   box-shadow: inset 0px 0px 16px 1px rgba(0, 0, 0, 0.24);
   cursor: pointer;
@@ -85,7 +79,7 @@ body {
 }
 
 .toggle-button::before {
-  content: '';
+  content: "";
   background-color: #edf3f1;
   border: solid 2px var(--purple);
   border-radius: 50px;
