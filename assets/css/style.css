@@ -6,7 +6,7 @@
   --dark-color: #4e4e4e;
   --link-color: rgb(80, 10, 141);
   --purple: #bb99dd;
-
+  --dark-bg-button: rgb(131, 126, 126);
   --font-poppins: "Poppins", sans-serif;
 }
 
@@ -47,7 +47,6 @@ body {
 
 .container {
   align-items: center;
-  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   height: 42em;
@@ -68,7 +67,7 @@ body {
 
 .toggle-button {
   appearance: none;
-  background-color: #edf3f1;
+  background-color: var(--dark-bg-button);
   border-radius: 50px;
   box-shadow: inset 0px 0px 16px 1px rgba(0, 0, 0, 0.24);
   cursor: pointer;
@@ -95,11 +94,9 @@ body {
 
 .toggle-button:checked {
   background-color: var(--body-bg-color);
-  box-sizing: border-box;
 }
 
 .toggle-button:checked::before {
-  box-sizing: border-box;
   left: 40px;
 }
 
