@@ -1,134 +1,83 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 	<head>
-		<!-- Google tag (gtag.js) -->
-		<script
-			async
-			src="https://www.googletagmanager.com/gtag/js?id=G-6ZFMKH00KS"
-		></script>
-		<script>
-			window.dataLayer = window.dataLayer || []
-			function gtag() {
-				dataLayer.push(arguments)
-			}
-			gtag("js", new Date())
-
-			gtag("config", "G-6ZFMKH00KS")
-		</script>
 		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="description"
+			content="Explore meu portfolio criativo e versátil, desenvolvido com HTML, CSS e JavaScript. Apresentando meu trabalho como Desenvolvedor de software, exibo uma coleção de projetos inovadores e soluções visualmente atraentes. Descubra meu estilo único e habilidades técnicas através de uma variedade de criações que demonstram minha paixão e comprometimento com a excelência no design e desenvolvimento web."
+		/>
+		<title>Meu Portfolio</title>
 		<link
 			rel="shortcut icon"
 			href="assets/img/favicon.jpg"
 			type="image/x-icon"
 		/>
 		<link rel="stylesheet" href="assets/css/style.css" />
-		<title>Meu portfólio</title>
 	</head>
 	<body>
-		<div class="container">
-			<div class="toggle-container">
-				<p class="toggle-paragraph">☼</p>
-				<input class="toggle-button" type="checkbox" />
-				<p class="toggle-paragraph">☾</p>
-			</div>
-			<img src="assets/img/fotoPerfil.png" alt="Minha foto" class="photo" />
-			<p class="paragraph-instagram">@rafaelpradoj</p>
+		<header class="cabecalho">
+			<nav class="cabecalho__navegacao">
+				<a href="index.html" class="cabecalho__navegacao__item">Home</a>
+				<a href="projects.html" class="cabecalho__navegacao__item">Projetos</a>
+				<a href="about.html" class="cabecalho__navegacao__item">Sobre mim</a>
+			</nav>
+		</header>
+		<main class="apresentacao">
+			<section class="apresentacao__conteudo">
+				<h1 class="apresentacao__conteudo__titulo">
+					Eleve seu negócio digital a outro nível
+					<span class="titulo__forte">com um Front-end de qualidade!</span>
+				</h1>
 
-			<ul class="project-list">
-				<li class="project-item">
-					<p class="project-paragraph">
-						<a
-							href="https://noemiacosturas.netlify.app"
-							target="_blank"
-							class="project-link link"
-							>Noemia Costuras</a
-						>
-					</p>
-				</li>
-				<li class="project-item">
-					<p class="project-paragraph">
-						<a
-							href="https://quizdosgames.netlify.app/"
-							target="_blank"
-							class="project-link link"
-							>Quiz Interativo</a
-						>
-					</p>
-				</li>
-				<li class="project-item">
-					<p class="project-paragraph">
-						<a
-							href="https://todorafaelpradoj.netlify.app/"
-							target="_blank"
-							class="project-link link"
-							>To-do List</a
-						>
-					</p>
-				</li>
-				<li class="project-item">
-					<p class="project-paragraph">
-						<a
-							href="https://reveloseudestino.netlify.app/"
-							target="_blank"
-							class="project-link link"
-							>Maratona Explorer</a
-						>
-					</p>
-				</li>
-			</ul>
+				<p class="apresentacao__conteudo__paragrafo">
+					Olá! Sou Rafael Prado, desenvolvedor Web com especialidade em
+					Front-end. Ajudo pequenos negócios e designers a colocarem em prática
+					boas ideias. Vamos conversar?
+				</p>
 
-			<ul class="social-media">
-				<li class="social-media-list twitter">
+				<div class="apresentacao__conteudo__redes">
+					<h2 class="conteudo__redes__titulo">Acesse minhas redes:</h2>
+
 					<a
-						href="https://twitter.com/rafaelpradoj97"
-						target="_blank"
-						class="twitter-link"
-						><img
-							src="assets/img/twitter.svg"
-							alt="Twitter social media"
-							class="twitter-icon"
-					/></a>
-				</li>
-
-				<li class="social-media-list instagram">
-					<a
-						href="https://www.instagram.com/rafaelpradoj/?hl=en"
-						target="_blank"
-						class="instagram-link"
-						><img
-							src="assets/img/instagram.svg"
-							alt="Instagram social media"
-							class="instagram-icon"
-					/></a>
-				</li>
-
-				<li class="social-media-list linkedin">
-					<a
-						href="https://www.linkedin.com/in/rafaelpradoj/"
-						target="_blank"
-						class="linkedin-link"
-						><img
-							src="assets/img/linkedin.svg"
-							alt="Linkedin social media"
-							class="linkedin-icon"
-					/></a>
-				</li>
-
-				<li class="social-media-list github">
-					<a
+						class="conteudo__redes__link"
 						href="https://github.com/rafaelpradoj"
 						target="_blank"
-						class="github-link"
-						><img
-							src="assets/img/github.svg"
-							alt="Github social media"
-							class="github-icon"
-					/></a>
-				</li>
-			</ul>
-		</div>
+					>
+						<img src="assets/img/github.png" alt="GitHub" />
+						GitHub
+					</a>
+
+					<a
+						class="conteudo__redes__link"
+						href="https://www.linkedin.com/in/rafaelpradoj/"
+						target="_blank"
+					>
+						<img src="assets/img/linkedin.png" alt="Linkedin" />
+						Linkedin
+					</a>
+
+					<a
+						class="conteudo__redes__link"
+						href="https://www.instagram.com/rafaelpradoj/"
+						target="_blank"
+					>
+						<img src="assets/img/instagram.png" alt="Instagram" />
+						Instagram
+					</a>
+				</div>
+			</section>
+
+			<img
+				class="apresentacao__foto"
+				src="assets/img/imagem.webp"
+				alt="Foto de Rafael Prado"
+			/>
+		</main>
+		<footer class="rodape">
+			<p class="rodape__paragrafo">Desenvolvido por Rafael Prado de Jesus</p>
+		</footer>
+		<div class="btn-voltar-topo">▲</div>
 		<script src="assets/js/app.js"></script>
 	</body>
 </html>

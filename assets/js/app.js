@@ -1,24 +1,26 @@
-const body = document.body
-const toggleButton = document.querySelector('.toggle-button')
-const links = document.querySelectorAll('.link')
+const buttonUp = document.querySelector('.btn-voltar-topo')
 
-const activateDarkMode = () => {
-  body.classList.add('body-after-toggle')
-  links.forEach(link => link.classList.add('link-after-toggle'))
+const goUpPage = () => {
+  scrollTo({
+    top: 0,
+    left: 0,
+    behavior: 'smooth'
+  })
 }
-const removeDarkMode = () => {
-  body.classList.remove('body-after-toggle')
-  links.forEach(link => link.classList.remove('link-after-toggle'))
-}
-const darkModeSettings = () => {
-  const isToggleButtonChecked = toggleButton.checked === true
+const showButtonUp = () => {
+  const pageHeight = document.documentElement.scrollHeight
+  const windowHeight = window.innerHeight;
+  const scrollPosition = window.offsetY || document.documentElement.scrollTop || document.body.scrollTop
+  const isInMiddleOrEndOfPage = scrollPosition > windowHeight / 2 && scrollPosition < pageHeight - windowHeight
 
-  if (isToggleButtonChecked) {
-    activateDarkMode()
-    return
+  if (isInMiddleOrEndOfPage) {
+    // Está no meio ou no fim da página
+    buttonUp.style.display = 'block';
+  } else {
+    // Está no início ou no fim da página
+    buttonUp.style.display = 'none';
   }
-
-  removeDarkMode()
 }
 
-toggleButton.addEventListener('click', darkModeSettings)
+buttonUp.addEventListener('click', goUpPage)
+window.addEventListener('scroll', showButtonUp)
