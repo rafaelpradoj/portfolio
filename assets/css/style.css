@@ -1,5 +1,5 @@
 /*Google Fonts*/
-@import url("https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
 
 :root {
 	--bg-color: #001c30;
@@ -7,8 +7,8 @@
 	--blue-color: #22d4fd;
 	--white-color: #f6f6f6;
 	--hover-color: #394867;
-	--font-krona: "Krona One", sans-serif;
-	--font-montserrat: "Montserrat", sans-serif;
+	--font-krona: 'Krona One', sans-serif;
+	--font-montserrat: 'Montserrat', sans-serif;
 }
 
 * {
@@ -64,7 +64,7 @@ body {
 
 .apresentacao__conteudo__titulo {
 	color: var(--white-color);
-	font-family: "Krona One", sans-serif;
+	font-family: 'Krona One', sans-serif;
 	font-size: 2.25rem;
 	font-style: normal;
 	font-weight: 400;
@@ -126,7 +126,7 @@ body {
 
 .apresentacao__foto {
 	height: auto;
-	width: 50%;
+	max-width: 50%;
 }
 
 .rodape {
